@@ -6,8 +6,12 @@
  **/
 
 /* Kernel Programming */
+#undef MODULE
 #define MODULE
+
 #define LINUX
+
+#undef __KERNEL__
 #define __KERNEL__
 
 #include <linux/module.h>  /* Needed by all modules */

@@ -19,3 +19,11 @@
 *.exe
 *.out
 *.app
+
+# Kernel modules
+*.ko
+*.cmd
+.tmp_versions/
+*.mod.c
+modules.order
+Module.symvers
