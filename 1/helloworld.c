@@ -18,20 +18,19 @@ MODULE_LICENSE("GPL");
 MODULE_AUTHOR("Oasis Vali");
 MODULE_DESCRIPTION("A simple Hello World module");
 
-static int init(void)
+static int onLoad(void)
 {
-  printk(KERN_ALERT "Hello World!\n");
-      
-  // A non 0 return means init_module failed; module can't be loaded.
-  return 0;
-}
-        
-static void exit(void)
-{
-  printk(KERN_ALERT "Goodbye world!\n");
+	pr_debug("Hello World!\n");
+
+	/* A non 0 return means init_module failed; module can't be loaded. */
+	return 0;
 }
 
+static void onUnload(void)
+{
+	pr_debug("Goodbye World!\n");
+}
 /* Registering init and cleanup functions */
-module_init(init);
-module_exit(exit);
+module_init(onLoad);
+module_exit(onUnload);
 
