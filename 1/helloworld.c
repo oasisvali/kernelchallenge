@@ -1,9 +1,4 @@
-/*  helloworld.c - The simplest kernel module.
- **
- **  Copyright (C) 2001 by Peter Jay Salzman
- **
- **  08/02/2006 - Updated by Rodrigo Rubira Branco <rodrigo@kernelhacking.com>
- **/
+/*  helloworld.c - The simplest kernel module */
 
 /* Kernel Programming */
 #undef MODULE
@@ -25,7 +20,7 @@ MODULE_DESCRIPTION("A simple Hello World module");
 
 static int init(void)
 {
-  printk(KERN_ALERT "Hello world!\n");
+  printk(KERN_ALERT "Hello World!\n");
       
   // A non 0 return means init_module failed; module can't be loaded.
   return 0;
