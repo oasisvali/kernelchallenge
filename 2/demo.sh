@@ -1,3 +1,9 @@
+echoex () {
+	echo "\$ $@"
+	eval $@
+}
+
+
 echo '___Proof of building kernel module:___'
 echo
 
