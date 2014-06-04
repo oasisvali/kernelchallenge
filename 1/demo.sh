@@ -14,28 +14,28 @@ echo
 echo '___Proof of module running on kernel___'
 echo
 
-echoex lsmod | grep helloworld
+echoex "lsmod | grep helloworld"
 echo
 
-echoex dmesg -l debug | tail -10
+echoex "dmesg -l debug | tail -10"
 echo
 
 echoex sudo insmod helloworld.ko
 echo
 
-echoex lsmod | grep helloworld
+echoex "lsmod | grep helloworld"
 echo
 
-echoex dmesg -l debug | tail -10
+echoex "dmesg -l debug | tail -10"
 echo
 
 echoex sudo rmmod helloworld
 echo
 
-echoex lsmod | grep helloworld
+echoex "lsmod | grep helloworld"
 echo
 
-echoex sudo dmesg -l debug -c | tail -10
+echoex "sudo dmesg -l debug -c | tail -10"
 echo
 
 echo '___Kernel module code___'
