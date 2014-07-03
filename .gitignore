@@ -27,3 +27,6 @@
 *.mod.c
 modules.order
 Module.symvers
+
+# Linux source
+linux
